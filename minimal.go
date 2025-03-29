@@ -14,7 +14,7 @@ func main() {
                         <!DOCTYPE html>
                         <html>
                         <head>
-                                <title>CycleSync - Simple Demo</title>
+                                <title>IDORPortal - Simple Demo</title>
                                 <style>
                                         body {
                                                 font-family: Arial, sans-serif;
@@ -61,7 +61,7 @@ func main() {
                         </head>
                         <body>
                                 <div class="container">
-                                        <h1>CycleSync - IDOR Demo</h1>
+                                        <h1>IDORPortal - IDOR Demo</h1>
                                         <p>This is a simplified demonstration of a web application with IDOR vulnerabilities.</p>
                                         
                                         <div class="card">
@@ -77,7 +77,7 @@ func main() {
                                         </div>
 
                                         <div class="footer">
-                                                CycleSync Demo &copy; 2025
+                                                IDORPortal Demo &copy; 2025
                                         </div>
                                 </div>
                         </body>
@@ -91,7 +91,7 @@ func main() {
                         <!DOCTYPE html>
                         <html>
                         <head>
-                                <title>CycleSync - Users</title>
+                                <title>IDORPortal - Users</title>
                                 <style>
                                         body {
                                                 font-family: Arial, sans-serif;
