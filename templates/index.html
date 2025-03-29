@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CycleSync - Security Testing Platform</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CycleSync</h1>
+            <p>A dynamic website with intentional vulnerabilities for security testing</p>
+        </header>
+
+        <div class="main-content">
+            <div class="card">
+                <h2>Welcome to CycleSync</h2>
+                <p>This platform contains intentional security vulnerabilities for testing and learning purposes. The website features Insecure Direct Object Reference (IDOR) vulnerabilities that allow unauthorized access to user data by manipulating object references.</p>
+                
+                <div class="warning">
+                    <h3>⚠️ Security Warning</h3>
+                    <p>This site is intentionally insecure for educational purposes. Do not use real personal data.</p>
+                </div>
+
+                <div class="feature-list">
+                    <h3>Features:</h3>
+                    <ul>
+                        <li>User authentication (login/signup)</li>
+                        <li>Profile management</li>
+                        <li>Post creation and management</li>
+                        <li>Intentional IDOR vulnerabilities</li>
+                    </ul>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="/login" class="button">Login</a>
+                    <a href="/signup" class="button button-secondary">Sign Up</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>IDOR Vulnerability Information</h2>
+                <p>Insecure Direct Object References (IDOR) occur when an application provides direct access to objects based on user-supplied input without proper authorization checks.</p>
+                
+                <h3>Vulnerable Endpoints:</h3>
+                <ul>
+                    <li><code>/api/user/{id}</code> - Access or modify any user's data by changing the ID</li>
+                    <li><code>/api/post/{id}</code> - Access, modify, or delete any post by changing the ID</li>
+                </ul>
+                
+                <p>Once you're logged in, try accessing another user's data by manipulating the ID parameters in API requests!</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>CycleSync - Created for Security Testing Purposes</p>
+        </footer>
+    </div>
+</body>
+</html>

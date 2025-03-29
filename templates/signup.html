@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CycleSync</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CycleSync</h1>
+            <p>Create a new account</p>
+        </header>
+
+        <div class="main-content">
+            <div class="card">
+                <h2>Sign Up</h2>
+                <div id="error-message" class="error-message hidden"></div>
+                
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div class="warning">
+                        <p>⚠️ This is a test site with intentional security vulnerabilities. Do not use real personal information.</p>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="button">Sign Up</button>
+                    </div>
+                </form>
+                
+                <div class="form-footer">
+                    <p>Already have an account? <a href="/login">Login</a></p>
+                    <p><a href="/">Back to home</a></p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>CycleSync - Created for Security Testing Purposes</p>
+        </footer>
+    </div>
+    
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

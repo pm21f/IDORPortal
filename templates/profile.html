@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - CycleSync</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>CycleSync</h1>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/profile" class="active">My Profile</a></li>
+                    <li><a href="#" id="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <div class="card">
+                <h2>User Profile</h2>
+                <div id="profile-error-message" class="error-message hidden"></div>
+                
+                <div id="profile-container">
+                    <div class="profile-info">
+                        <p><strong>ID:</strong> <span id="user-id"></span></p>
+                        <p><strong>Username:</strong> <span id="username"></span></p>
+                        <p><strong>Email:</strong> <span id="email"></span></p>
+                        <p><strong>Joined:</strong> <span id="created-at"></span></p>
+                    </div>
+
+                    <div class="vulnerability-info">
+                        <h3>IDOR Vulnerability Testing</h3>
+                        <p>Try viewing or modifying another user's profile by changing the user ID in the API request:</p>
+                        <code>/api/user/{id}</code>
+                        <p>Current user ID: <span id="current-user-id"></span></p>
+                        
+                        <div class="vulnerability-test">
+                            <h4>Test IDOR Vulnerability</h4>
+                            <div class="form-group">
+                                <label for="test-user-id">Enter User ID to view:</label>
+                                <input type="number" id="test-user-id" min="1">
+                                <button id="view-user-btn" class="button button-small">View User</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Edit Profile</h2>
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="edit-username">Username</label>
+                        <input type="text" id="edit-username" name="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-email">Email</label>
+                        <input type="email" id="edit-email" name="email" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="button">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>My Posts</h2>
+                </div>
+                <div id="user-posts-list" class="posts-list">
+                    <!-- Posts will be loaded here -->
+                    <p class="loading">Loading posts...</p>
+                </div>
+            </div>
+
+            <div class="card danger-zone">
+                <h2>Danger Zone</h2>
+                <p>Delete your account permanently. This action cannot be undone.</p>
+                <button id="delete-account-btn" class="button button-danger">Delete Account</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>CycleSync - Created for Security Testing Purposes</p>
+        </footer>
+    </div>
+    
+    <script src="/static/js/profile.js"></script>
+</body>
+</html>
